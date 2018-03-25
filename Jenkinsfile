@@ -10,8 +10,9 @@ pipeline {
             }
         }
         stage('Test') {
+            agent { docker { image 'python:3.6' } }
             steps {
-                echo 'Testing..'
+                sh 'python manage.py test'
             }
         }
         stage('Deploy') {
