@@ -6,7 +6,7 @@ pipeline {
             agent { docker { image 'python:3.6' } }
             steps {
                 sh 'python --version'
-                sh 'omg did that really work'
+                sh 'echo "omg did that really work"'
             }
         }
         stage('Test') {
